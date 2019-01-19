@@ -1,6 +1,6 @@
 {
   "name": "docz-plugin-css-temp",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "it's fork on docz-plugin-css. why: 1. update docz-core to latest. 2. ruleOpts not publish in offical package",
   "license": "MIT",
   "main": "dist/index.js",
