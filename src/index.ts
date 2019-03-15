@@ -118,6 +118,7 @@ export interface CSSPluginOptions {
   loaderOpts?: Opts
   cssOpts?: Opts
   ruleOpts?: Opts
+  disableHash?: boolean
 }
 
 const defaultOpts: Record<string, any> = {
@@ -153,9 +154,10 @@ export const css = (opts: CSSPluginOptions = defaultOpts) =>
           },
         })
 
+        const hashStr = opts.disableHash ? '' : '.[hash]';
         config.plugins.push(
           new MiniCssExtractPlugin({
-            filename: 'static/css/[name].[hash].css',
+            filename: `static/css/[name]${hashStr}.css`,
           })
         )
       }
